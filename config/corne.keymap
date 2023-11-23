@@ -12,9 +12,6 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-
-        &out OUT_BLE
-
         default_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
