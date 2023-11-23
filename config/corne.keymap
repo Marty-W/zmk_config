@@ -23,7 +23,7 @@
             bindings = <
 &kp ESC                       &kp Q  &kp W  &kp E             &kp R                   &kp T        &kp Y            &kp U      &kp I            &kp O    &kp P     &kp DEL
 &kp LS(LA(LC(LEFT_COMMAND)))  &kp A  &kp S  &kp D             &kp F                   &kp G        &kp H            &kp J      &kp K            &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&kp LALT                    &kp Z  &kp X  &kp C             &kp V                   &kp B        &kp N            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &out OUT_TOG
+&kp LALT                      &kp Z  &kp X  &kp C             &kp V                   &kp B        &kp N            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &out OUT_TOG
                                             &kp LEFT_CONTROL  &mt LEFT_COMMAND ENTER  &lt 1 TAB    &lt 2 BACKSPACE  &kp SPACE  &kp RIGHT_SHIFT
             >;
         };
@@ -36,10 +36,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-   &trans    &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET  &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSLH
-   &trans    &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &kp MINUS  &kp EQUAL &kp GRAVE       &kp LBKT &kp RBKT &kp PIPE
-   &kp LSHFT &kp N6   &kp N7 &kp N8   &kp N9   &kp N0      &kp UNDER  &kp PLUS  &kp TILDE       &kp LBRC &kp RBRC &kp RSHFT
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&trans     &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSLH
+&trans     &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp MINUS  &kp EQUAL  &kp GRAVE        &kp LBKT  &kp RBKT  &kp PIPE
+&kp LSHFT  &kp N6    &kp N7  &kp N8    &kp N9    &kp N0       &kp UNDER  &kp PLUS   &kp TILDE        &kp LBRC  &kp RBRC  &kp RSHFT
+                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
 
@@ -50,12 +50,13 @@
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-bindings = <
-   &trans     &kp F1        &kp F2       &kp F3       &kp F4       &kp F5          &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &trans
-   &trans     &kp C_PREV    &kp C_NEXT   &kp C_VOL_DN &kp C_VOL_UP &kp C_PP        &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &bt BT_CLR &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &trans   &trans   &trans &trans    &trans &trans
-                          	                        &trans   &trans   &trans       &trans   &trans   &trans
-                        >;
+            bindings = <
+&trans      &kp LS(LA(LC(LG(NUMBER_1))))  &kp LS(LA(LC(LG(NUMBER_2))))  &kp LS(LA(LC(LG(NUMBER_3))))  &kp LS(LA(LC(LG(NUMBER_4))))  &kp LS(LA(LC(LG(NUMBER_5))))    &kp F6            &kp F7      &kp F8      &kp F9     &kp C_VOLUME_UP  &trans
+&trans      &kp LS(LA(LC(LG(A))))         &kp LS(LA(LC(LG(S))))         &kp LS(LA(LC(LG(W))))         &kp LS(LA(LC(LG(D))))         &kp F5                          &kp LEFT          &kp DOWN    &kp UP      &kp RIGHT  &kp C_VOL_DN     &trans
+&bt BT_CLR  &kp LS(LC(LA(LG(H))))         &kp LS(LA(LC(LG(J))))         &kp LS(LA(LC(LG(K))))         &kp LS(LA(LC(LG(L))))         &kp F6                          &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_PREV  &trans     &trans           &trans
+                                                                        &trans                        &trans                        &trans                          &trans            &trans      &trans
+            >;
+
             >;
         };
     };
