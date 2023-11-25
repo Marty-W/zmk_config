@@ -8,6 +8,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        raycast {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <38 39>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,7 +31,7 @@
 &kp ESC       &kp Q  &kp W  &kp E             &kp R           &kp T              &kp Y        &kp U                           &kp I             &kp O    &kp P     &kp GRAVE
 &kp TAB       &kp A  &kp S  &kp D             &kp F           &kp G              &kp H        &kp J                           &kp K             &kp L    &kp SEMI  &kp SINGLE_QUOTE
 &kp LEFT_ALT  &kp Z  &kp X  &kp C             &kp V           &kp B              &kp N        &kp M                           &kp COMMA         &kp DOT  &kp FSLH  &kp DOUBLE_QUOTES
-                            &kp LEFT_COMMAND  &kp LEFT_SHIFT  &lt 2 BACKSPACE    &lt 1 ENTER  &mt LS(LA(LC(LEFT_GUI))) SPACE  &kp LEFT_CONTROL
+                            &kp LEFT_CONTROL  &kp LEFT_SHIFT  &lt 2 BACKSPACE    &lt 1 ENTER  &mt LS(LA(LC(LEFT_GUI))) SPACE  &kp LEFT_COMMAND
             >;
         };
 
