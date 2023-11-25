@@ -13,7 +13,12 @@
 
         raycast {
             bindings = <&kp LG(SPACE)>;
-            key-positions = <38 39>;
+            key-positions = <37 40>;
+        };
+
+        vimesc {
+            bindings = <&none>;
+            key-positions = <19 20>;
         };
     };
 
