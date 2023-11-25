@@ -17,7 +17,7 @@
         };
 
         vimesc {
-            bindings = <&none>;
+            bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
         };
     };
