@@ -19,7 +19,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC       &kp Q  &kp W  &kp E             &kp R           &kp T              &kp Y        &kp U      &kp I             &kp O    &kp P     &trans
+&kp ESC       &kp Q  &kp W  &kp E             &kp R           &kp T              &kp Y        &kp U      &kp I             &kp O    &kp P     &kp GRAVE
 &kp TAB       &kp A  &kp S  &kp D             &kp F           &kp G              &kp H        &kp J      &kp K             &kp L    &kp SEMI  &kp SINGLE_QUOTE
 &kp LEFT_ALT  &kp Z  &kp X  &kp C             &kp V           &kp B              &kp N        &kp M      &kp COMMA         &kp DOT  &kp FSLH  &kp LS(LA(LC(LEFT_COMMAND)))
                             &kp LEFT_COMMAND  &kp LEFT_SHIFT  &lt 2 BACKSPACE    &lt 1 ENTER  &kp SPACE  &kp LEFT_CONTROL
