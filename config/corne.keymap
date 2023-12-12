@@ -80,9 +80,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp AT        &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp EXCLAMATION  &kp COLON  &kp MINUS     &kp PLUS   &kp PERCENT  &kp CARET
+&kp N1  &kp N2  &kp N3  &kp AT        &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp EXCLAMATION  &kp COLON  &kp MINUS     &kp PLUS   &kp PERCENT  &trans
 &kp N4  &kp N5  &kp N6  &kp POUND     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp AMPERSAND    &kp EQUAL  &kp GT        &kp UNDER  &kp TILDE    &trans
-&kp N7  &kp N8  &kp N9  &kp DOLLAR    &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp APOS         &kp GRAVE  &kp ASTERISK  &kp SLASH  &kp PIPE     &trans
+&kp N7  &kp N8  &kp N9  &kp DOLLAR    &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp PIPE         &kp GRAVE  &kp ASTERISK  &kp SLASH  &kp CARET    &trans
                         &kp NUMBER_0  &trans                &trans                   &trans           &trans     &trans
             >;
         };
