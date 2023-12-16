@@ -39,7 +39,7 @@
         };
 
         undo {
-            bindings = <&kp LG(U)>;
+            bindings = <&kp LG(Z)>;
             key-positions = <25 7>;
         };
     };
