@@ -37,6 +37,11 @@
             bindings = <&kp LG(A)>;
             key-positions = <25 26>;
         };
+
+        undo {
+            bindings = <&kp LG(U)>;
+            key-positions = <25 7>;
+        };
     };
 
     macros {
