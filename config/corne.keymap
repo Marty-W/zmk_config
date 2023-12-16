@@ -24,13 +24,18 @@
         };
 
         copy {
-            bindings = <&kp K_COPY>;
+            bindings = <&kp LG(C)>;
             key-positions = <25 27>;
         };
 
         paste {
-            bindings = <&kp K_PASTE>;
+            bindings = <&kp LG(V)>;
             key-positions = <25 28>;
+        };
+
+        select-all {
+            bindings = <&kp LG(A)>;
+            key-positions = <25 26>;
         };
     };
 
