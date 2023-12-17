@@ -72,6 +72,24 @@
             bindings = <&kp SPACE &kp NUMBER_4>;
             label = "LEADER_4";
         };
+
+        select_delete: select_delete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(A) &kp BACKSPACE>;
+            label = "SELECT_DELETE";
+        };
+    };
+
+    behaviors {
+        select_delete_behav: select_delete_behav {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SELECT_DELETE_BEHAV";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&select_delete_behav>;
+
+            tapping-term-ms = <100>;
+        };
     };
 
     keymap {
@@ -85,10 +103,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC       &kp Q  &kp W  &kp E             &kp R           &kp T              &kp Y        &kp U      &kp I                     &kp O          &kp P                &mt UNDER MINUS
-&kp TAB       &kp A  &kp S  &kp D             &kp F           &kp G              &kp H        &kp J      &kp K                     &kp L          &mt SEMICOLON COLON  &mt GRAVE SINGLE_QUOTE
-&kp LEFT_ALT  &kp Z  &kp X  &kp C             &kp V           &kp B              &kp N        &kp M      &mt LESS_THAN COMMA       &mt GT PERIOD  &mt SLASH QUESTION   &kp LEFT_COMMAND
-                            &kp LEFT_CONTROL  &kp LEFT_SHIFT  &lt 2 BACKSPACE    &lt 1 ENTER  &kp SPACE  &kp LS(LA(LC(LEFT_GUI)))
+&kp ESC       &kp Q  &kp W  &kp E                 &kp R           &kp T              &kp Y        &kp U      &kp I                     &kp O          &kp P                &mt UNDER MINUS
+&kp TAB       &kp A  &kp S  &kp D                 &kp F           &kp G              &kp H        &kp J      &kp K                     &kp L          &mt SEMICOLON COLON  &mt GRAVE SINGLE_QUOTE
+&kp LEFT_ALT  &kp Z  &kp X  &select_delete_behav  &kp V           &kp B              &kp N        &kp M      &mt LESS_THAN COMMA       &mt GT PERIOD  &mt QUESTION SLASH   &kp LEFT_COMMAND
+                            &kp LEFT_CONTROL      &kp LEFT_SHIFT  &lt 2 BACKSPACE    &lt 1 ENTER  &kp SPACE  &kp LS(LA(LC(LEFT_GUI)))
             >;
         };
 
