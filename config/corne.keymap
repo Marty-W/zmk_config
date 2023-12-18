@@ -72,24 +72,9 @@
             bindings = <&kp SPACE &kp NUMBER_4>;
             label = "LEADER_4";
         };
-
-        select_delete: select_delete {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(A) &kp BACKSPACE>;
-            label = "SELECT_DELETE";
-        };
     };
 
     behaviors {
-        select_delete_behav: select_delete_behav {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SELECT_DELETE_BEHAV";
-            #binding-cells = <0>;
-            bindings = <&kp C>, <&select_delete_behav>;
-
-            tapping-term-ms = <100>;
-        };
     };
 
     keymap {
