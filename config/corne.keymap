@@ -153,10 +153,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp F1  &mkp LCLK    &mmv MOVE_UP    &mkp RCLK        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp LA(NUMBER_1)   &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(NUMBER_5)  &kp LA(NUMBER_6)
-&kp F2  &kp K_SLEEP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_PLAY_PAUSE   &kp C_NEXT         &kp LEFT           &kp DOWN          &kp UP            &kp RIGHT         &out OUT_BLE      &out OUT_USB
-&kp F3  &kp F4       &kp F5          &kp F6           &kp HOME           &kp END            &leader_1          &leader_2         &leader_3         &leader_4         &leader_5         &leader_6
-                                     &none            &none              &none              &kp LC(BACKSPACE)  &none             &none
+&kp LS(LA(LC(LG(NUMBER_1))))  &kp LS(LA(LC(LG(NUMBER_2))))  &kp LS(LC(LA(LG(NUMBER_3))))  &kp K_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp LA(NUMBER_1)   &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(NUMBER_5)  &kp LA(NUMBER_6)
+&kp LS(LC(LA(LG(NUMBER_4))))  &kp LC(LS(LA(LG(NUMBER_5))))  &kp LS(LA(LC(LG(NUMBER_6))))  &mmv MOVE_RIGHT  &kp C_PLAY_PAUSE   &kp C_NEXT         &kp LEFT           &kp DOWN          &kp UP            &kp RIGHT         &out OUT_BLE      &out OUT_USB
+&kp F3                        &kp F4                        &kp F5                        &kp F6           &kp HOME           &kp END            &leader_1          &leader_2         &leader_3         &leader_4         &leader_5         &leader_6
+                                                                                          &none            &none              &none              &kp LC(BACKSPACE)  &none             &none
             >;
         };
     };
