@@ -21,7 +21,6 @@
 #define DEF 0  // layer shortcuts, must match order in which they are defined below
 #define SYM 1
 #define NAV 2
-#define CZE 3
 
 
 /*
@@ -44,14 +43,11 @@ ZMK_COMBO(combo_select_all, &kp LG(A), LB4 LB0, ALL)
 
 
 // MACROS
-ZMK_BEHAVIOR(sgm, macro_one_param, 
-    bindings = <&kp SPACE &kp MACRO_PLACEHOLDER>;
-    wait-ms = <2>;
-    tap-ms = <2>;
-)
-
-ZMK_BEHAVIOR(switch_mac_space, macro_one_param, 
-    bindings = <&kp SPACE &kp MACRO_PLACEHOLDER>;
+ZMK_BEHAVIOR(sgm, macro_one_param,
+    bindings =
+        <&kp SPACE>,
+        <&macro_param_1to1>,
+        <&kp MACRO_PLACEHOLDER>;
     wait-ms = <2>;
     tap-ms = <2>;
 )
@@ -77,7 +73,7 @@ ZMK_LAYER(default_layer,
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp LALT      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &mt LT COMMA  &mt GT DOT    &mt QMARK SLASH &kp LEFT_COMMAND
     // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                  &kp LCTRL     &LSHIFT       &lt 2 BSPC        &lt 1 ENTER   &kp SPACE     HYPER
+                                                  &kp LCTRL     &kp LSHIFT    &lt 2 BSPC        &lt 1 ENTER   &kp SPACE     HYPER
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
