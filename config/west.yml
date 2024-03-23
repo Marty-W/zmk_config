@@ -9,3 +9,5 @@ manifest:
       import: app/west.yml
   self:
     path: config
+
+  # for errors check this guide: https://zmk.dev/docs/troubleshooting
