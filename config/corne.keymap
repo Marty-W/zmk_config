@@ -40,6 +40,12 @@ ZMK_COMBO(combo_vimesc, &kp ESC, RM1 RM2, ALL)
 ZMK_COMBO(combo_copy, &kp LG(C), LB4 LB2,  ALL)
 ZMK_COMBO(combo_paste, &kp LG(V), LB4 LB1,  ALL)
 ZMK_COMBO(combo_select_all, &kp LG(A), LB4 LB0, ALL)
+ZMK_COMBO(combo_lpar, &kp LPAR, LB2 LB1, ALL)
+ZMK_COMBO(combo_rpar, &kp RPAR, LB1 LB0, ALL)
+ZMK_COMBO(combo_lbkt, &kp LBKT, LM2 LM1, ALL)
+ZMK_COMBO(combo_rbkt, &kp RBKT, LM1 LM0, ALL)
+ZMK_COMBO(combo_lbrc, &kp LBRC, LT2 LT1, ALL)
+ZMK_COMBO(combo_rbrc, &kp RBRC, LT1 LT0, ALL)
 
 
 // MACROS
