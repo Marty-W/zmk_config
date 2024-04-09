@@ -21,6 +21,7 @@
 #define DEF 0  // layer shortcuts, must match order in which they are defined below
 #define SYM 1
 #define NAV 2
+#define NUM 3
 
 
 /*
@@ -85,6 +86,26 @@ MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 // MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
 
+//NUM word 
+
+// tap: num-word | double-tap: sticky num-layer | hold: nav-layer
+#define SMART_NUM &smart_num NAV 2
+ZMK_BEHAVIOR(smart_num, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&num_dance>;
+)
+ZMK_BEHAVIOR(num_dance, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
+)
+&num_word {  // num-word, requires PR #1451
+    layers = <NUM>;
+    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+};
+
+
 // ALIASES 
  
 #define HYPER &kp LS(LA(LC(LG(LEFT_GUI))))
@@ -99,15 +120,16 @@ MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 
 ZMK_LAYER(default_layer,
     // ╭─────────┬───────────┬───────────┬─────────────┬─────────────┬──────────╮╭─────────────┬──────────────┬─────────────┬───────────┬────────────────┬─────────────╮
-        &kp ESC   &kp Q       &kp W       &kp E         &kp R         &kp T       &kp Y         &kp U          &kp I         &kp O       &kp P            &mt UNDER MINUS
+        &trans    &kp Q       &kp W       &kp E         &kp R         &kp T       &kp Y         &kp U          &kp I         &kp O       &kp P            &trans
     // ├─────────┼───────────┼───────────┼─────────────┼─────────────┼──────────┤├─────────────┼──────────────┼─────────────┼───────────┼────────────────┼─────────────┤
-        &kp TAB   &hml LGUI A &hml LALT S &hml LCTRL D  &hml LSHIFT F &kp G       &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L &hmr RGUI COLON  &mt GRAVE SINGLE_QUOTE
+        &trans    &hml LGUI A &hml LALT S &hml LCTRL D  &hml LSHIFT F &kp G       &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L &hmr RGUI SEMI   &trans
     // ├─────────┼───────────┼───────────┼─────────────┼─────────────┼──────────┤├─────────────┼──────────────┼─────────────┼───────────┼────────────────┼─────────────┤
         &trans    &kp Z       &kp X       &kp C         &kp V         &kp B       &kp N         &kp M          &mt LT COMMA  &mt GT DOT  &mt QMARK SLASH  &trans 
     // ╰─────────┼───────────┼───────────┼─────────────┼─────────────┼──────────┤├─────────────┼──────────────┼─────────────┼───────────┼────────────────┼─────────────┤
-                                          &kp LCTRL     &kp LSHIFT    &lt 2 BSPC  &lt 1 ENTER   &kp SPACE  HYPER
-                //                       ╰─────────────┴─────────────┴──────────╯╰─────────────┴──────────┴─────────────╯
+                                          &kp TAB      &kp BSPC       SMART_NUM   &lt 1 ENTER   &kp SPACE      HYPER
+                //                       ╰─────────────┴─────────────┴──────────╯╰─────────────┴──────────────┴─────────────╯
 )
+
 
 ZMK_LAYER(lower_layer,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
@@ -133,4 +155,16 @@ ZMK_LAYER(raise_layer,
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
+
+ZMK_LAYER(num_layer,
+    // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+        &trans        &trans        &kp N1        &kp N2        &kp N3        &trans            &trans        &trans        &trans       &trans         &trans        &trans
+    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        &trans        &trans        &kp N4        &kp N5        &kp N6        &trans            &trans        &trans        &trans        &trans        &trans        &trans
+    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        &trans        &trans        &kp N7        &kp N8        &kp N9        &trans            &trans        &trans        &trans        &trans        &trans        &trans
+    // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                                  &trans        &trans        &kp N0            &trans        &trans        &trans
+    //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+)
 
