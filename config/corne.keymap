@@ -4,11 +4,14 @@
  * SPDX-License-Identifier: MIT
  */
 
+#define HOST_OS 2
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
+#include "../zmk-nodefree-config/international_chars/czech.dtsi"
 
 
 // NODEFREE docs: https://github.com/urob/zmk-nodefree-config
@@ -22,6 +25,7 @@
 #define SYM 1
 #define NAV 2
 #define NUM 3
+#define CZE 4
 
 
 /*
@@ -50,6 +54,9 @@ ZMK_COMBO(combo_rbrc, &kp RBRC, LT1 LT0, ALL)
 ZMK_COMBO(combo_capsword, &caps_word, LM3 LM2, ALL)
 
 
+// czech layer
+ZMK_COMBO(combo_czech, &sl 4, RT1 RT2, ALL)
+
 // MACROS
 ZMK_BEHAVIOR(sgm, macro_one_param,
     bindings =
@@ -59,6 +66,7 @@ ZMK_BEHAVIOR(sgm, macro_one_param,
     wait-ms = <2>;
     tap-ms = <2>;
 )
+
 
 // HOMEROW MODS 
 //
@@ -120,11 +128,11 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 
 ZMK_LAYER(default_layer,
     // ╭─────────┬───────────┬───────────┬─────────────┬─────────────┬──────────╮╭─────────────┬──────────────┬─────────────┬───────────┬────────────────┬─────────────╮
-        &trans    &kp Q       &kp W       &kp E         &kp R         &kp T       &kp Y         &kp U          &kp I         &kp O       &kp P            &trans
+        &none     &kp Q       &kp W       &kp E         &kp R         &kp T       &kp Y         &kp U          &kp I         &kp O       &kp P            &none
     // ├─────────┼───────────┼───────────┼─────────────┼─────────────┼──────────┤├─────────────┼──────────────┼─────────────┼───────────┼────────────────┼─────────────┤
-        &trans    &hml LGUI A &hml LALT S &hml LCTRL D  &hml LSHIFT F &kp G       &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L &hmr RGUI SEMI   &trans
+        &none     &hml LGUI A &hml LALT S &hml LCTRL D  &hml LSHIFT F &kp G       &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L &hmr RGUI SEMI   &none
     // ├─────────┼───────────┼───────────┼─────────────┼─────────────┼──────────┤├─────────────┼──────────────┼─────────────┼───────────┼────────────────┼─────────────┤
-        &trans    &kp Z       &kp X       &kp C         &kp V         &kp B       &kp N         &kp M          &mt LT COMMA  &mt GT DOT  &mt QMARK SLASH  &trans 
+        &none     &kp Z       &kp X       &kp C         &kp V         &kp B       &kp N         &kp M          &mt LT COMMA  &mt GT DOT  &mt QMARK SLASH  &none 
     // ╰─────────┼───────────┼───────────┼─────────────┼─────────────┼──────────┤├─────────────┼──────────────┼─────────────┼───────────┼────────────────┼─────────────┤
                                           &kp TAB      &kp BSPC       SMART_NUM   &lt 1 ENTER   &kp SPACE      HYPER
                 //                       ╰─────────────┴─────────────┴──────────╯╰─────────────┴──────────────┴─────────────╯
@@ -133,11 +141,11 @@ ZMK_LAYER(default_layer,
 
 ZMK_LAYER(lower_layer,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &trans        &trans        &trans        &kp AT        &kp DQT       &kp MINUS         &kp EXCL      &kp STAR      &kp CARET     &trans        &trans        &trans
+        &none         &trans        &trans        &kp AT        &kp DQT       &kp MINUS         &kp EXCL      &kp STAR      &kp CARET     &trans        &trans        &none
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &trans        &trans        &trans        &kp DOLLAR    &kp APOS      &kp UNDER         &kp AMPS      &kp PLUS      &kp MINUS     &trans        &trans        &trans
+        &none         &trans        &trans        &kp DOLLAR    &kp APOS      &kp UNDER         &kp AMPS      &kp PLUS      &kp MINUS     &trans        &trans        &none
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &trans        &trans        &trans        &kp HASH      &kp GRAVE     &kp TILDE         &kp PIPE      &kp PERCENT   &kp BSLH      &trans        &trans        &trans
+        &none         &trans        &trans        &kp HASH      &kp GRAVE     &kp TILDE         &kp PIPE      &kp PERCENT   &kp BSLH      &trans        &trans        &none
     // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                   &trans        &kp EQUAL     &kp GT            &trans        &trans        &trans
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -145,11 +153,11 @@ ZMK_LAYER(lower_layer,
 
 ZMK_LAYER(raise_layer,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        SPACE6        SPACE5        SPACE4        SPACE3        SPACE2        SPACE1            &kp LA(N1)    &kp LA(N2)    &kp LA(N3)    &kp LA(N4)    &kp LA(N5)    &kp LA(N6)
+        &none         SPACE5        SPACE4        SPACE3        SPACE2        SPACE1            &kp LA(N1)    &kp LA(N2)    &kp LA(N3)    &kp LA(N4)    &kp LA(N5)    &none
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp C_BRI_DEC &kp C_BRI_INC &trans        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP      &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &out OUT_BLE  &out OUT_USB
+        &none         &kp C_BRI_DEC &kp C_BRI_INC &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP      &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &out OUT_BLE  &none
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &trans        &trans        &trans        &kp C_PREV    &kp C_PP      &kp C_NEXT        &sgm N1       &sgm N2       &sgm N3       &sgm N4       &sgm N5       &sgm N6
+        &none         &trans        &trans        &kp C_PREV    &kp C_PP      &kp C_NEXT        &sgm N1       &sgm N2       &sgm N3       &sgm N4       &sgm N5       &none
     // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                   &trans        &trans        &trans            &kp LC(BSPC)  &kp HOME      &kp END
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -158,13 +166,25 @@ ZMK_LAYER(raise_layer,
 
 ZMK_LAYER(num_layer,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &trans        &trans        &kp N1        &kp N2        &kp N3        &trans            &trans        &trans        &trans       &trans         &trans        &trans
+        &none         &trans        &kp N1        &kp N2        &kp N3        &trans            &trans        &trans        &trans       &trans         &trans        &none
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &trans        &trans        &kp N4        &kp N5        &kp N6        &trans            &trans        &trans        &trans        &trans        &trans        &trans
+        &none         &trans        &kp N4        &kp N5        &kp N6        &trans            &trans        &trans        &trans        &trans        &trans        &none
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &trans        &trans        &kp N7        &kp N8        &kp N9        &trans            &trans        &trans        &trans        &trans        &trans        &trans
+        &none         &trans        &kp N7        &kp N8        &kp N9        &trans            &trans        &trans        &trans        &trans        &trans        &none
     // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                   &trans        &trans        &kp N0            &trans        &trans        &trans
+    //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+)
+
+ZMK_LAYER(cze_layer,
+    // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+        &none         &trans        &cs_ea        &cs_ec        &cs_rc        &cs_tc            &cs_ya        &cs_ur        &cs_ia        &cs_oa        &trans        &none
+    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        &none         &cs_aa        &cs_sc        &cs_dc        &trans        &trans            &trans        &cs_ua        &trans        &trans        &trans        &none
+    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        &none         &cs_zc        &trans        &cs_cc        &trans        &trans            &cs_nc        &trans        &trans        &trans        &trans        &none
+    // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                                  &trans        &kp LSHIFT    &trans            &trans        &trans        &trans
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
