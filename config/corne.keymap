@@ -107,7 +107,6 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 
 
 // ALIASES 
- 
 #define HYPER &kp LS(LA(LC(LG(LEFT_GUI))))
 #define LSC &mt LESS_THAN COMMA
 #define SPACE1 &kp LS(LA(LC(LG(N1))))
@@ -133,13 +132,13 @@ ZMK_LAYER(default_layer,
 
 ZMK_LAYER(lower_layer,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp N1        &kp N2        &kp N3        &kp AT        &kp LBRC      &kp RBRC          &kp EXCL      &kp PLUS      &kp MINUS     &kp COLON     &kp PERCENT   &trans
+        &trans        &trans        &trans        &kp AT        &kp DQT       &kp COLON         &kp EXCL      &kp STAR      &kp CARET     &trans        &trans        &trans
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp N4        &kp N5        &kp N6        &kp DOLLAR    &kp LBKT      &kp RBKT          &kp AMPS      &kp LT        &kp GT        &kp UNDER     &kp TILDE     &kp GRAVE
+        &trans        &trans        &trans        &kp DOLLAR    &kp APOS      &kp UNDER         &kp AMPS      &kp PLUS      &kp MINUS     &trans        &trans        &trans
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp N7        &kp N8        &kp N9        &kp HASH      &kp LPAR      &kp RPAR          &kp PIPE      &kp CARET     &kp STAR      &kp SLASH     &kp BACKSLASH &trans
+        &trans        &trans        &trans        &kp HASH      &kp GRAVE     &kp TILDE         &kp PIPE      &kp PERCENT   &kp BSLH      &trans        &trans        &trans
     // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                  &kp N0        &kp EQUAL     &kp GT            &trans        &trans        &trans
+                                                  &trans        &kp EQUAL     &kp GT            &trans        &trans        &trans
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
