@@ -28,6 +28,11 @@
 #define CZE 4
 
 
+&sl {  // sticky-layer config
+    ignore-modifiers;          // allow chording sticky mods & layers
+};
+
+
 /*
  COMBOS
 
