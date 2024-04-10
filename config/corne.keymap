@@ -70,7 +70,7 @@ ZMK_BEHAVIOR(sgm, macro_one_param,
         <&kp MACRO_PLACEHOLDER>;
     wait-ms = <2>;
     tap-ms = <2>;
-
+)
 
 
 // HOMEROW MODS 
