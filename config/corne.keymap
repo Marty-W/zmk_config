@@ -65,7 +65,7 @@ ZMK_BEHAVIOR(sgm, macro_one_param,
         <&kp MACRO_PLACEHOLDER>;
     wait-ms = <2>;
     tap-ms = <2>;
-)
+
 
 
 // HOMEROW MODS 
@@ -130,7 +130,7 @@ ZMK_LAYER(default_layer,
     // ╭─────────┬───────────┬───────────┬─────────────┬─────────────┬──────────╮╭─────────────┬──────────────┬─────────────┬───────────┬────────────────┬─────────────╮
         &none     &kp Q       &kp W       &kp E         &kp R         &kp T       &kp Y         &kp U          &kp I         &kp O       &kp P            &none
     // ├─────────┼───────────┼───────────┼─────────────┼─────────────┼──────────┤├─────────────┼──────────────┼─────────────┼───────────┼────────────────┼─────────────┤
-        &none     &hml LGUI A &hml LALT S &hml LCTRL D  &hml LSHIFT F &kp G       &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L &hmr RGUI SEMI   &none
+        &none     &hml LALT A &hml LGUI S &hml LSHIFT D  &hml LCTRL F &kp G       &kp H         &hmr RCTRL J   &hmr RSHIFT K &hmr RGUI L &hmr RALT SEMI   &none
     // ├─────────┼───────────┼───────────┼─────────────┼─────────────┼──────────┤├─────────────┼──────────────┼─────────────┼───────────┼────────────────┼─────────────┤
         &none     &kp Z       &kp X       &kp C         &kp V         &kp B       &kp N         &kp M          &mt LT COMMA  &mt GT DOT  &mt QMARK SLASH  &none 
     // ╰─────────┼───────────┼───────────┼─────────────┼─────────────┼──────────┤├─────────────┼──────────────┼─────────────┼───────────┼────────────────┼─────────────┤
