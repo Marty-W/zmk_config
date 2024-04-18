@@ -128,7 +128,8 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 #define SPACE4 &kp LS(LA(LC(LG(N4))))
 #define SPACE5 &kp LS(LA(LC(LG(N5))))
 #define SPACE6 &kp LS(LA(LC(LG(N6))))
-#define SPACE7 &kp LS(LA(LC(LG(N6))))
+#define SPACE7 &kp LS(LA(LC(LG(N7))))
+#define SPACE8 &kp LS(LA(LC(LG(N8))))
 
 
 ZMK_LAYER(default_layer,
@@ -160,7 +161,7 @@ ZMK_LAYER(raise_layer,
     // ╭──┬─────────────┬─────────────┬───────────┬────────────┬────────────╮╭────────────┬──────────┬──────────┬──────────┬─────────────┬──╮
         xx SPACE5        SPACE4        SPACE3      SPACE2       SPACE1        &kp LA(N1)   &kp LA(N2) &kp LA(N3) &kp LA(N4) &kp LA(N5)    xx
     // ├──┼─────────────┼─────────────┼───────────┼────────────┼────────────┤├────────────┼──────────┼──────────┼──────────┼─────────────┼──┤
-        xx SPACE7        SPACE6        &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP  &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &out OUT_BLE  xx
+        xx SPACE7        SPACE8        &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP  &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &out OUT_BLE  xx
     // ├──┼─────────────┼─────────────┼───────────┼────────────┼────────────┤├────────────┼──────────┼──────────┼──────────┼─────────────┼──┤
         xx &kp C_BRI_DEC &kp C_BRI_INC &kp C_PREV  &kp C_PP     &kp C_NEXT    &sgm N1      &sgm N2    &sgm N3    &sgm N4    &sgm N5       xx
     // ╰──┼─────────────┼─────────────┼───────────┼────────────┼────────────┤├────────────┼──────────┼──────────┼──────────┼─────────────┼──┤
@@ -175,7 +176,7 @@ ZMK_LAYER(num_layer,
     // ├──┼──────┼──────┼──────┼──────┼──────┤   ├──────┼──────┼──────┼──────┼──────┼──┤
         xx &trans &kp N4 &kp N5 &kp N6 &trans     &trans &kp N4 &kp N5 &kp N6 &trans xx
     // ├──┼──────┼──────┼──────┼──────┼──────┤   ├──────┼──────┼──────┼──────┼──────┼──┤
-        xx &trans &kp N7 &kp N8 &kp N9 &trans     &trans &kp N7 &kp N8 &kp N9 &trans xx
+        xx &trans &kp N7 &kp N8 &kp N9 &trans     &trans &trans &trans &trans &trans xx
     // ╰──┼──────┼──────┼──────┼──────┼──────┤   ├──────┼──────┼──────┼──────┼──────┼──┤
                          &kp N0 &trans &to 0      &trans &trans &trans
     //                  ╰──────┴──────┴──────╯   ╰──────┴──────┴──────╯
