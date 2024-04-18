@@ -176,9 +176,9 @@ ZMK_LAYER(num_layer,
     // ├──┼──────┼──────┼──────┼──────┼──────┤   ├──────┼──────┼──────┼──────┼──────┼──┤
         xx &trans &kp N4 &kp N5 &kp N6 &trans     &trans &kp N4 &kp N5 &kp N6 &trans xx
     // ├──┼──────┼──────┼──────┼──────┼──────┤   ├──────┼──────┼──────┼──────┼──────┼──┤
-        xx &trans &kp N7 &kp N8 &kp N9 &trans     &trans &trans &trans &trans &trans xx
+        xx &trans &kp N7 &kp N8 &kp N9 &trans     &trans &kp N7 &kp N8 &kp N9 &trans xx
     // ╰──┼──────┼──────┼──────┼──────┼──────┤   ├──────┼──────┼──────┼──────┼──────┼──┤
-                         &kp N0 &trans &to 0      &trans &trans &trans
+                         &kp N0 &trans &to 0      &trans &trans &kp N0
     //                  ╰──────┴──────┴──────╯   ╰──────┴──────┴──────╯
 )
 
