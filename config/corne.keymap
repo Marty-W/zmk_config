@@ -59,6 +59,10 @@ ZMK_COMBO(combo_rbkt, &kp RBKT, LM1 LM0, ALL)
 ZMK_COMBO(combo_lbrc, &kp LBRC, LT2 LT1, ALL)
 ZMK_COMBO(combo_rbrc, &kp RBRC, LT1 LT0, ALL)
 ZMK_COMBO(combo_capsword, &caps_word, LM3 LM2, ALL)
+ZMK_COMBO(combo_lreset, &sys_reset, LT4 LM4, ALL)
+ZMK_COMBO(combo_lbootloader, &bootloader, LM4 LB4, ALL)
+ZMK_COMBO(combo_rreset, &sys_reset, RT4 RM4, ALL)
+ZMK_COMBO(combo_rbootloader, &bootloader, RM4 RB4, ALL)
 
 
 // czech layer
