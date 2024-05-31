@@ -151,9 +151,9 @@ ZMK_LAYER(default_layer,
 
 ZMK_LAYER(lower_layer,
     // ╭──┬───────┬──────┬──────────┬─────────┬─────────╮╭────────┬───────────┬─────────┬──────┬──────┬──╮
-        xx &trans  &trans &kp AT     &kp DQT   &kp UNDER  &kp EXCL &kp STAR    &kp CARET &trans &trans xx
+        xx &bootloader  &trans &kp AT     &kp DQT   &kp UNDER  &kp EXCL &kp STAR    &kp CARET &trans &trans xx
     // ├──┼───────┼──────┼──────────┼─────────┼─────────┤├────────┼───────────┼─────────┼──────┼──────┼──┤
-        xx &trans  &trans &kp DOLLAR &kp APOS  &kp MINUS  &kp AMPS &kp PLUS    &kp MINUS &trans &trans xx
+        xx &sys_reset  &trans &kp DOLLAR &kp APOS  &kp MINUS  &kp AMPS &kp PLUS    &kp MINUS &trans &trans xx
     // ├──┼───────┼──────┼──────────┼─────────┼─────────┤├────────┼───────────┼─────────┼──────┼──────┼──┤
         xx &trans  &trans &kp HASH   &kp GRAVE &kp TILDE  &kp PIPE &kp PERCENT &kp BSLH  &trans &trans xx
     // ╰──┼───────┼──────┼──────────┼─────────┼─────────┤├────────┼───────────┼─────────┼──────┼──────┼──┤
