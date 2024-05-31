@@ -138,9 +138,9 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 
 ZMK_LAYER(default_layer,
 // ╭──┬───────────┬───────────┬─────────────┬────────────┬─────╮╭──────┬────────────┬─────────────┬───────────┬───────────────┬──╮
-    xx &kp Q       &kp W       &kp E         &kp R        &kp T  &kp Y  &kp U        &kp I         &kp O       &kp P           xx
+    xx &bootloader       &kp W       &kp E         &kp R        &kp T  &kp Y  &kp U        &kp I         &kp O       &bootloader           xx
 // ├──┼───────────┼───────────┼─────────────┼────────────┼─────┤├──────┼────────────┼─────────────┼───────────┼───────────────┼──┤
-    xx &kp A       &hml LALT S &hml LGUI D   &hml LCTRL F &kp G  &kp H  &hmr RCTRL J &hmr RGUI K   &hmr RALT L &kp COLON       xx
+    xx &sys_reset       &hml LALT S &hml LGUI D   &hml LCTRL F &kp G  &kp H  &hmr RCTRL J &hmr RGUI K   &hmr RALT L &sys_reset       xx
 // ├──┼───────────┼───────────┼─────────────┼────────────┼─────┤├──────┼────────────┼─────────────┼───────────┼───────────────┼──┤
     xx &kp Z       &kp X       &kp C         &kp V        &kp B  &kp N  &kp M        &mt LT COMMA  &mt GT DOT  &mt QMARK SLASH xx
 // ╰──┼───────────┼───────────┼─────────────┼────────────┼─────┤├──────┼────────────┼─────────────┼───────────┼───────────────┼──┤
@@ -151,9 +151,9 @@ ZMK_LAYER(default_layer,
 
 ZMK_LAYER(lower_layer,
     // ╭──┬───────┬──────┬──────────┬─────────┬─────────╮╭────────┬───────────┬─────────┬──────┬──────┬──╮
-        xx &bootloader  &trans &kp AT     &kp DQT   &kp UNDER  &kp EXCL &kp STAR    &kp CARET &trans &trans xx
+        xx &trans  &trans &kp AT     &kp DQT   &kp UNDER  &kp EXCL &kp STAR    &kp CARET &trans &trans xx
     // ├──┼───────┼──────┼──────────┼─────────┼─────────┤├────────┼───────────┼─────────┼──────┼──────┼──┤
-        xx &sys_reset  &trans &kp DOLLAR &kp APOS  &kp MINUS  &kp AMPS &kp PLUS    &kp MINUS &trans &trans xx
+        xx &trans  &trans &kp DOLLAR &kp APOS  &kp MINUS  &kp AMPS &kp PLUS    &kp MINUS &trans &trans xx
     // ├──┼───────┼──────┼──────────┼─────────┼─────────┤├────────┼───────────┼─────────┼──────┼──────┼──┤
         xx &trans  &trans &kp HASH   &kp GRAVE &kp TILDE  &kp PIPE &kp PERCENT &kp BSLH  &trans &trans xx
     // ╰──┼───────┼──────┼──────────┼─────────┼─────────┤├────────┼───────────┼─────────┼──────┼──────┼──┤
