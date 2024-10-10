@@ -135,7 +135,6 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 #define SPACE7 &kp LS(LA(LC(LG(N7))))
 #define SPACE8 &kp LS(LA(LC(LG(N8))))
 
-
 ZMK_LAYER(default_layer,
 // ╭───────────┬───────────┬─────────────┬────────────┬─────╮╭──────┬────────────┬─────────────┬───────────┬───────────────╮
     &kp Q       &kp W       &kp E         &kp R        &kp T  &kp Y  &kp U        &kp I         &kp O       &kp P          
@@ -147,6 +146,8 @@ ZMK_LAYER(default_layer,
                                    &kp TAB &mt LSHIFT BSPC  SMART_NUM   &lt 1 ENTER &kp SPACE HYPER
         //                        ╰───────┴─────────┴──────────╯╰───────────┴─────────┴─────╯
 )
+
+// changer
   
 
 ZMK_LAYER(lower_layer,
